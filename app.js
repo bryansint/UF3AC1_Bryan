@@ -13,6 +13,13 @@ app.use(express.static('/views'));
 app.use(express.json())
 app.use('/', products_routes)
 
+//TAREA 7
+const dotenv= requiere("dotenv");
+dotenv.config();
+module.exports={
+    mongoURI: process.env.MONGO_URL
+};
+
 //Server startup
 app.listen(5000, () => {
     // console.log('server is listening on port 5000');
