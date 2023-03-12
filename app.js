@@ -14,7 +14,7 @@ app.use(express.json())
 app.use('/', products_routes)
 
 //TAREA 7
-const dotenv= requiere("dotenv");
+const dotenv= require("dotenv");
 dotenv.config();
 module.exports={
     mongoURI: process.env.MONGO_URL
