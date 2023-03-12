@@ -1,6 +1,6 @@
 const express = require('express')
 const products_routes = require('./routes/products.js')
-
+const slugify = requiere('slugify')
 //Server instantiation
 const app = express()
 
@@ -15,7 +15,9 @@ app.use('/', products_routes)
 
 //Server startup
 app.listen(5000, () => {
-    console.log('server is listening on port 5000')
+    // console.log('server is listening on port 5000');
+    const arteriscosMSJ = slugify('server is listening on port 5000',{replacement: '*', lower: true });
+    console.log(arteriscosMSJ);
 })
 
 
