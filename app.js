@@ -1,6 +1,6 @@
 const express = require('express')
 const products_routes = require('./routes/products.js')
-const slugify = requiere('slugify')
+const slugify = require('slugify')
 //Server instantiation
 const app = express()
 
